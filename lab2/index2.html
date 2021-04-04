@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../src/css/style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="content-wrapper">
+            <header>
+                <h1 class="logo">Teachinder</h1>
+                <form>
+                    <input class="search-inpt-field" type="text" name="search_name" placeholder="Enter name to search" accesskey="s" autocomplete="on">
+                    <input class="search-submit-btn" type="submit" value="Search">
+                </form>
+            </header>
+            <div class="func top">
+                <nav class="navigation">
+                    <a>Teachers</a>
+                    <a>Statistics</a>
+                    <a>Favorites</a>
+                    <a>About</a>
+                </nav>
+                <button class="add-teacher" onclick="addForm()">
+                    Add teacher
+                </button>
+            </div>
+            <hr>
+            <h2 class="headers">Top Teachers</h2>
+            <div class="techers-list-wrapper">
+                <form>
+                    Filter by:
+                    <input class="with-photo" type="checkbox" id="photo" name="photo" value="show" onchange="onlyWithPhoto()">
+                    <label class="left-label-check" for="photo">Show only with photo</label>
+                    <input class="favorites" type="checkbox" id="favorites" name="favorites" value="show" onchange="onlyFavorites()">
+                    <label for="favorites">Show only favorites</label>
+                </form>
+                <ul class="teacher-list">
+                    <li class="person-info">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/axile.png" alt="S.R" onclick="infoForm()">
+                            </div>
+                            <figcaption>Sergey<br>Rykhtorov</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="person-info favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/nafany.png" alt="V.G">
+                            </div>
+                            <figcaption>Vladislav<br>Gorshkov</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="person-info">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/hobbit.png" alt="A.K">
+                            </div>
+                            <figcaption>Abay<br>Khasenov</figcaption>
+                        </figure>
+                        <div class="country">Khazahstan</div>
+                    </li>
+                    <li class="person-info favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/interz.png" alt="T.Y">
+                            </div>
+                            <figcaption>Timofey<br>Yakushin</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="person-info">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/shiro.png" alt="D.S">
+                            </div>
+                            <figcaption>Dmitry<br>Sokolov</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="person-info">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/sanji.png" alt="S.K">
+                            </div>
+                            <figcaption>Sanjar<br>Kuliev</figcaption>
+                        </figure>
+                        <div class="country">Uzbekistan</div>
+                    </li>
+                    <li class="person-info">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                T.T
+                            </div>
+                            <figcaption>Timur<br>Tulepov</figcaption>
+                        </figure>
+                        <div class="country">Khazahstan</div>
+                    </li>
+                    <li class="person-info favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                A.G
+                            </div>
+                            <figcaption>Alexey<br>Golubev</figcaption>
+                        </figure>
+                        <div class="country">Khazahstan</div>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <h2 class="headers">Statistics</h2>
+            <table class="statistics-table">
+                <thead>
+                    <tr class="columns">
+                        <th class="name-coll"><h4>Name</h4></th>
+                        <th><h4>Age</h4></th>
+                        <th><h4>Gender</h4></th>
+                        <th><h4>Nationality</h4></th>
+                    </tr>
+                </thead>
+                <tr class="odd">
+                    <td class="name-coll">Sergey Rykhtorov</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="even">
+                    <td class="name-coll">Vladislav Gorshkov</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="odd">
+                    <td class="name-coll">Abay Khasenov</td>
+                    <td>21</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="even">
+                    <td class="name-coll">Timofey Yakushin</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="odd">
+                    <td class="name-coll">Dmitry Sokolov</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="even">
+                    <td class="name-coll">Sanjar Kuliev</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="odd">
+                    <td class="name-coll">Timur Tulepov</td>
+                    <td>25</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="even">
+                    <td class="name-coll">Sanya Simple</td>
+                    <td>24</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="odd">
+                    <td class="name-coll">Vladislav Sinotov</td>
+                    <td>23</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="even">
+                    <td class="name-coll">Misha Miroshnichenko</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="odd">
+                    <td class="name-coll">Dima Frizuk</td>
+                    <td>21</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                </tr>
+                <tr class="even">
+                    <td class="name-coll">Jenya Juravel</td>
+                    <td>19</td>
+                    <td>Female</td>
+                    <td>Russia</td>
+                </tr>
+            </table>
+            <div class="pagination">
+                <a class="current-page">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>...</a>
+                <a>Last</a>
+            </div>
+            <hr>
+            <h2 class="headers">Favorites</h2>
+            <div class="favorites-wrapper">
+                <img class="arrow" src="../src/images/arrow_left.png" alt="arrow_left" onclick="scrlLeft()">
+                <ul class="favorite-teacher-list">
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/axile.png" alt="S.R" onclick="infoForm()">
+                            </div>
+                            <figcaption>Sergey<br>Rykhtorov</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/nafany.png" alt="V.G">
+                            </div>
+                            <figcaption>Vladislav<br>Gorshkov</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                A.K
+                            </div>
+                            <figcaption>Abay<br>Khasenov</figcaption>
+                        </figure>
+                        <div class="country">Khazahstan</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/interz.png" alt="T.Y">
+                            </div>
+                            <figcaption>Timofey<br>Yakushin</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/shiro.png" alt="D.S">
+                            </div>
+                            <figcaption>Dmitry<br>Sokolov</figcaption>
+                        </figure>
+                        <div class="country">Russia</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/sanji.png" alt="S.K">
+                            </div>
+                            <figcaption>Sanjar<br>Kuliev</figcaption>
+                        </figure>
+                        <div class="country">Uzbekistan</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/buster.png" alt="T.T">
+                            </div>
+                            <figcaption>Timur<br>Tulepov</figcaption>
+                        </figure>
+                        <div class="country">Khazahstan</div>
+                    </li>
+                    <li class="favorite">
+                        <figure class="person">
+                            <div class="img-wrapper">
+                                <img class="img" src="../src/images/teachers/petrik.png" alt="A.G">
+                            </div>
+                            <figcaption>Alexey<br>Golubev</figcaption>
+                        </figure>
+                        <div class="country">Khazahstan</div>
+                    </li>
+                </ul>
+                <img class="arrow" src="../src/images/arrow_right.png" alt="arrow_right" onclick="scrlRight()">
+            </div>
+            <hr>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <footer>
+                <div class="func">
+                    <nav class="navigation">
+                        <a>Teachers</a>
+                        <a>Statistics</a>
+                        <a>Favorites</a>
+                        <a>About</a>
+                    </nav>
+                    <button class="add-teacher" onclick="addForm()">
+                        Add teacher
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="add-popup">
+        <p onclick="hideAddForm()">&#10006;</p>
+        <h2>Add Teacher</h2>
+        <form class="addForm">
+            Name<br>
+            <input type="text" name="fullName" placeholder="Enter name" accesskey="n" autocomplete="off" required><br>
+            Country<br>
+            <select name="country">
+                <option value="Ukraine"selected>Ukraine</option>
+                <option value="Russia">Russia</option>
+                <option value="Khazahstan">Khazahstan</option>
+              </select><br>
+            City<br>
+            <input type="text" name="city" accesskey="t" autocomplete="off" required><br>
+            Phone<br>
+            <input type="tel" name="phoneNumber" accesskey="p" autocomplete="off" required><br>
+            Email<br>
+            <input type="email" name="email" accesskey="g" autocomplete="off" required><br>
+            Age<br>
+            <input type="text" name="age" accesskey="a" autocomplete="off" min="0" max="200" required><br>
+            <div class="div-radio">
+                Sex
+                <div class="buttons">
+                    Male<input class="radio" type="radio" name="sex" value="male" accesskey="1">
+                    Female<input class="radio" type="radio" name="sex" value="female" accesskey="2"><br>
+                </div>
+            </div>
+            <div class="div-color">
+                Background color
+                <div>
+                    <img src="../src/images/rgb.png" alt="rgb logo">
+                    <input class="color" type="color" name="color" accesskey="c" >
+                </div>
+            </div>
+            <input class="add-btn" type="submit" value="Add">
+        </form>
+    </div>
+    <div class="teacher" data-color="#343434">
+        <div class="title">
+            <p onclick="HideinfoForm()">&#10006;</p>
+            <h2>Teacher Info</h2>
+        </div>
+        <div class="pic-disc">
+            <div class="pic">
+                <img class="img-card" src="../src/images/teachers/axile.png" alt="teacher-pic">
+            </div>
+            <div class="disc">
+                <h2 class="name">Sergey Rykhtorov</h2>
+                <p>Kyiv, Ukraine</p>
+                <p>36, M</p>
+                <a href="axile@gmail.com">axile@gmail.com</a>
+                <p>+380957783497</p>
+            </div>
+        </div>
+        <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a class="map">toggle map</a>
+        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d895.7760386725222!2d35.031487757127884!3d48.46016721472206!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe31e1d097b0f%3A0xb767db92df04574d!2z0YPQuy4g0KXQtdGA0YHQvtC90YHQutCw0Y8sIDcsINCU0L3QuNC_0YDQviwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1sru!2sua!4v1614677323251!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+    </div>
+    <script>
+        function scrlRight(){
+            document.getElementsByClassName("favorite-teacher-list")[0].scrollLeft += 150;
+        }
+        function scrlLeft(){
+            document.getElementsByClassName("favorite-teacher-list")[0].scrollLeft -= 150;
+        }
+        function addForm(){
+            document.getElementsByClassName("add-popup")[0].className = 'add-popup-active';
+            document.getElementsByClassName("main-wrapper")[0].className = 'main-wrapper-active';
+        }
+        function infoForm(){
+            document.getElementsByClassName("teacher")[0].className = 'teacher-active';
+            document.getElementsByClassName("main-wrapper")[0].className = 'main-wrapper-active';
+        }
+        function HideinfoForm(){
+            document.getElementsByClassName("teacher-active")[0].className = 'teacher';
+            document.getElementsByClassName("main-wrapper-active")[0].className = 'main-wrapper';
+        }
+        function hideAddForm(){
+            document.getElementsByClassName("add-popup-active")[0].className = 'add-popup';
+            document.getElementsByClassName("main-wrapper-active")[0].className = 'main-wrapper';
+        }
+        function onlyFavorites(){
+            let teachers = document.getElementsByClassName("person-info");
+            for (let teacher of teachers) {
+                if(teacher.className!=="person-info favorite"){
+                    if(document.getElementsByClassName("favorites")[0].checked === false){
+                        if(teacher.getElementsByClassName("img").length===0){
+                            if(document.getElementsByClassName("with-photo")[0].checked === false){
+                                teacher.hidden = false;
+                            }
+                        }
+                        else{
+                            teacher.hidden = false;
+                        }
+                    }
+                    else{
+                        teacher.hidden = true;
+                    }
+                }
+            }
+        }
+        function onlyWithPhoto(){
+            let teachers = document.getElementsByClassName("person-info");
+            for (let teacher of teachers) {
+                if(teacher.getElementsByClassName("img").length===0){
+                    if(document.getElementsByClassName("with-photo")[0].checked === false){
+                        if(teacher.className!=="person-info favorite"){
+                            if(document.getElementsByClassName("favorites")[0].checked === false){
+                                teacher.hidden = false;
+                            }
+                        }
+                        else{
+                            teacher.hidden = false;
+                        }
+                    }
+                    else{
+                        teacher.hidden = true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

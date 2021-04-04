@@ -1,0 +1,1156 @@
+$red: rgb(255, 94, 94);
+$grey: rgb(103, 103, 103);
+$dark-red: rgb(171, 25, 25);
+$black: #000;
+$white: #fff;
+
+%wrapper{
+    width: 68vw;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+%button{
+    border: 1px solid $red;
+    color: $red;
+    font-weight: bold;
+    &:hover{
+        background-color: $red;
+        color: $white;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+
+
+  .main-wrapper {
+    @extend %wrapper;
+    &-active{
+        filter: blur(2px);
+        @extend %wrapper;
+    }
+  }
+
+
+
+
+  
+  .content-wrapper{
+    width: 84%;
+    margin: auto;
+  }
+  
+  header{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    h1{
+      color: rgb(241, 241, 241);
+      letter-spacing: 2px;
+      font-size: 40px;
+      font-family: 'Frank Ruhl Libre', serif;
+      text-shadow: -2px -2px 0px $red, 2px 2px 0px $black;
+      &:hover{
+          text-shadow: -3px -2px 0px $red, 3px 2px 0px $black;
+      }
+    }
+    form {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    input{
+        height: 100%;
+        background: transparent;
+        box-sizing: border-box;
+        font-size: 13px;
+        outline: none;
+    }
+  }
+
+  .search-inpt-field{
+    width: 165px;
+    padding-left: 5px;
+    margin-right: 12px;
+    border: 1px solid $grey;
+}
+
+
+.search-submit-btn{
+    cursor: pointer;
+    width: 80px;
+    @extend %button;
+}
+
+.func{
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top{
+    color: $red;
+    a:hover{
+        color: $dark-red;
+    }
+}
+
+.navigation{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+.add-teacher{
+    outline: none;
+    background-color: $white;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: $red;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid $red;
+    &:hover{
+        background-color: $red;
+        color: $white;
+    }
+}
+
+hr{
+    width: 50%;
+    height: 1px;
+    background-color: $black;
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.headers{
+    margin-top: 32px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.techers-list-wrapper{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    form{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    label{
+        color: $grey;
+        &:hover{
+            color: $black;
+        }
+    }
+    input{
+        margin-left: 15px;
+    }
+}
+
+.left-label-check{
+    border-right: 2px dotted $grey;
+    padding-right: 40px;
+}
+
+.teacher-list{
+    display: grid;
+    margin-top: 20px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    li{
+        list-style: none;
+    }
+}
+
+.person{
+    text-align: center;
+    font-size: 20px;
+    figcaption{
+        font-weight: bold;
+        margin: auto;
+    }
+}
+
+.country{
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.teacher-list{
+    .favorite{
+        &:before{
+            color: yellow;
+            font-size: 25px;
+            margin-left: 130px;
+            position: absolute;
+            content: '\2605';
+        }
+    }
+}
+
+
+.img-wrapper{
+    cursor: pointer;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid $red;
+    margin: auto;
+    margin-bottom: 20px;
+    line-height: 100px;
+    color: $red;
+    font-size: 30px;
+    img{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        color: $red;
+        font-size: 20px;
+        text-align: center;
+        &:hover{
+
+            transform: scale(1.1, 1.1);
+        }
+    }
+    &:hover{
+        border: 4px solid $dark-red;
+        font-size: 33px;
+        color: $dark-red;
+    }
+}
+
+
+.statistics-table{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    tr{
+        width: 100%;
+        text-align: center;
+    }
+    td{
+        height: 30px;
+    }
+    th{
+        height: 50px;
+    }
+    h4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 5px solid transparent;
+        height: 100%;
+        line-height: 100%;
+        &:hover{
+            border-bottom: 5px solid #000;
+            background-color: rgb(235, 235, 235);   
+        }
+    }
+}
+
+.columns {
+    border-bottom: 1px solid #000;
+    .name-coll{
+        padding-left: 0px;
+        h4{
+            justify-content: left;
+            padding-left: 20px;
+        }
+    }
+}
+
+.name-coll{
+    text-align: left;
+    width: 36%;
+    padding-left: 20px;
+}
+
+.even{
+    background-color: rgba(251, 243, 243, 0.85);
+}
+
+.odd{
+    background-color: $white;
+}
+.pagination{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    a{
+        color: rgb(39, 93, 255);
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .current-page{
+        color: #000;
+    }
+}
+
+.favorites-wrapper{
+    margin-top: 40px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.arrow{
+    height: 50px;
+    display: block;
+        margin: auto;
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.favorite-teacher-list{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    column-gap: 40px;
+    li{
+        list-style: none;
+    }
+}
+
+.text{
+    margin-top: 40px;
+}
+
+footer{
+    color: rgb(125, 102, 255);
+    a:hover{
+        color: rgb(0, 22, 101);
+    }
+}
+
+
+/*********************************************/
+/******************POPUPS*********************/
+/*********************************************/
+
+.add-popup{
+    display: none;
+}
+
+.teacher{
+    display: none;
+}
+
+
+.teacher-active{
+    display: block;
+    position: absolute;
+    top: calc(50vh - 300px);
+    left: calc(50vw - 415px);
+    border: 1px solid $black;
+    background-color: $white;
+    width: 830px;
+    height: 600px;
+    .title{
+        width: 100%;
+        p:not(.comment){
+            cursor: pointer;
+            text-align: right;
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+        h2{
+            font-weight: normal;
+            text-align: center;
+            font-size: 38px;
+        }
+    }
+    .pic-disc{
+        display: flex;
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        justify-content: space-between;
+        .pic{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        .disc{
+            padding-left: 5%;
+            padding-top: 1%;
+            h2{
+                font-size: 39px;
+                font-weight: normal;
+                margin-bottom: 40px;
+                &:after{
+                    color: yellow;
+                    font-size: 40px;
+                    margin-left: 50px;
+                    margin-top: -10px;
+                    position: absolute;
+                    content: '\2605';
+                }
+            }
+            p, a{
+                display: block;
+                margin-bottom: 20px;
+                text-decoration: none;
+            }
+            width: 60%;
+        }
+    }
+    .comment{
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .map{
+        color: rgb(0, 55, 255);
+        border-bottom: 1px dashed rgb(0, 55, 255);
+        margin-left: 10%;
+    }
+}
+
+.add-popup-active{
+    display: block;
+    position: absolute;
+    top: calc(50vh - 280px);
+    left: calc(50vw - 175px);
+    border: 1px solid $black;
+    background-color: $white;
+    width: 350px;
+    height: 720px;
+    font-size: 13px;
+    p{
+        cursor: pointer;
+        text-align: right;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+    h2{
+        text-align: center;
+        font-weight: normal;
+        font-size: 38px;
+        margin-top: -12px;
+    }
+    form{
+        width: 60%;
+        margin: auto;
+        margin-top: 40px;
+        input:not(.buttons input, .color, .add-btn), select{
+            box-sizing: border-box;
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.div-radio{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.div-color{
+    margin-bottom: 40px;
+    div{
+        float: right;
+    }
+    img{
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+}
+
+.color{
+    width: 50px;
+    height: 22px;
+}
+
+.buttons{
+    input{
+        height: 10px;
+        margin-left: 10px;
+    }
+}
+
+.add-btn{
+    background-color: $white;
+    height: 60px;
+    width: 100%;
+    font-size: 30px;
+    @extend %button;
+}
+
+@media only screen and (max-width: 1300px){
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 120px;
+            }
+        }
+    }
+    .teacher-active{
+        top: calc(50vh - 265px);
+        left: calc(50vw - 365px);
+        width: 730px;
+        height: 530px;
+        .title{
+            p:not(.comment){
+                margin-top: 25px;
+                margin-right: 15px;
+                font-size: 15px;
+            }
+            h2{
+                font-size: 33px;
+            }
+        }
+        .pic-disc{
+            margin-top: 25px;
+            .pic{
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+            .disc{
+                padding-left: 5%;
+                padding-top: 1%;
+                h2{
+                    font-size: 35px;
+                    margin-bottom: 35px;
+                    &:after{
+                        font-size: 30px;
+                        margin-left: 50px;
+                        margin-top: 0px;
+                    }
+                }
+                p, a{
+                    font-size: 14px;
+                    margin-bottom: 18px;
+                }
+                width: 60%;
+            }
+        }
+        .comment{
+            margin-top: 18px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        .map{
+            font-size: 14px;
+            margin-left: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 100px;
+            }
+        }
+    }
+    .add-popup-active{
+        top: calc(50vh - 230px);
+    }
+
+    .teacher-active{
+        top: calc(50vh - 220px);
+        left: calc(50vw - 300px);
+        width: 600px;
+        height: 440px;
+        .title{
+            p:not(.comment){
+                margin-top: 20px;
+                margin-right: 15px;
+                font-size: 12px;
+            }
+            h2{
+                font-size: 28px;
+                
+            }
+        }
+        .pic-disc{
+            margin-top: 25px;
+            .pic{
+                width: 42%;
+                img{
+                    width: 100%;
+                }
+            }
+            .disc{
+                padding-left: 5%;
+                padding-top: 1%;
+                h2{
+                    font-size: 30px;
+                    margin-bottom: 35px;
+                    &:after{
+                        font-size: 20px;
+                        margin-left: 30px;
+                        margin-top: 5px;
+                    }
+                }
+                p, a{
+                    font-size: 12px;
+                    margin-bottom: 14px;
+                }
+                width: 60%;
+            }
+        }
+        .comment{
+            margin-top: 18px;
+            margin-bottom: 16px;
+            font-size: 12px;
+        }
+        .map{
+            font-size: 12px;
+            margin-left: 10%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+    .teacher-list{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .navigation{
+        width: 350px;
+        a{
+            font-size: 18px;
+        }
+    }
+    .add-teacher{
+        margin-top: 6px;
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+    }
+    header{
+        height: 40px;
+        h1{
+          font-size: 35px;
+        }
+    }
+    .func{
+        margin-top: 40px;
+    }
+    hr{
+        margin-top: 15px;
+    }
+    .techers-list-wrapper{
+        margin-top: 30px;
+        form{
+            margin-bottom: 20px;
+        }
+    }
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 110px;
+            }
+        }
+    }
+    .add-popup-active{
+        top: calc(50vh - 200px);
+    }
+
+    .teacher-active{
+        top: calc(50vh - 190px);
+        left: calc(50vw - 260px);
+        width: 520px;
+        height: 380px;
+        .title{
+            p:not(.comment){
+                margin-top: 20px;
+                margin-right: 15px;
+                font-size: 10px;
+            }
+            h2{
+                font-size: 24px;
+            }
+        }
+        .pic-disc{
+            margin-top: 20px;
+            .pic{
+                width: 42%;
+                img{
+                    width: 100%;
+                }
+            }
+            .disc{
+                padding-left: 5%;
+                padding-top: 1%;
+                h2{
+                    font-size: 26px;
+                    margin-bottom: 30px;
+                    &:after{
+                        font-size: 20px;
+                        margin-left: 30px;
+                        margin-top: 0px;
+                    }
+                }
+                p, a{
+                    font-size: 11px;
+                    margin-bottom: 12px;
+                }
+                width: 60%;
+            }
+        }
+        .comment{
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-size: 10px;
+        }
+        .map{
+            font-size: 10px;
+            margin-left: 10%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .teacher-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .navigation{
+        width: 250px;
+        a{
+            font-size: 14px;
+        }
+    }
+    .search-inpt-field{
+        height: 20px;
+        width: 100px;
+        padding-left: 5px;
+        margin-right: 12px;
+        font-size: 8px;
+    }
+    .search-submit-btn{
+        font-size: 8px;
+        cursor: pointer;
+        width: 60px;
+        height: 20px;   
+    }
+    .add-teacher{
+        margin-top: 7px;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    header{
+        height: 35px;
+        h1{
+          font-size: 30px;
+        }
+    }
+    .func{
+        margin-top: 30px;
+    }
+    hr{
+        margin-top: 10px;
+    }
+    .headers{
+        margin-top: 28px;
+        font-size: 30px;
+    }
+    .techers-list-wrapper{
+        margin-top: 20px;
+    }
+    .main-wrapper{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 120px;
+            }
+        }
+    }
+    .add-popup-active{
+        top: calc(50vh - 170px);
+    }
+
+    .teacher-active{
+        top: calc(50vh - 165px);
+        left: calc(50vw - 230px);
+        width: 460px;
+        height: 330px;
+        .title{
+            p:not(.comment){
+                margin-top: 15px;
+                margin-right: 15px;
+                font-size: 9px;
+            }
+            h2{
+                font-size: 22px;
+            }
+        }
+        .pic-disc{
+            margin-top: 20px;
+            .pic{
+                width: 42%;
+                img{
+                    width: 100%;
+                }
+            }
+            .disc{
+                padding-left: 5%;
+                padding-top: 1%;
+                h2{
+                    font-size: 22px;
+                    margin-bottom: 25px;
+                    &:after{
+                        font-size: 20px;
+                        margin-left: 30px;
+                        margin-top: 0px;
+                    }
+                }
+                p, a{
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+                width: 60%;
+            }
+        }
+        .comment{
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-size: 8px;
+        }
+        .map{
+            font-size: 8px;
+            margin-left: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .teacher-list{
+        grid-template-columns: 1fr 1fr;
+    }
+    .navigation{
+        width: 200px;
+        a{
+            font-size: 10px;
+        }
+    }
+    .search-inpt-field{
+        height: 15px;
+        width: 80px;
+        padding-left: 5px;
+        margin-right: 12px;
+        font-size: 5px;
+    }
+    .search-submit-btn{
+        font-size: 5px;
+        cursor: pointer;
+        width: 40px;
+        height: 15px;   
+    }
+    .add-teacher{
+        margin-top: 14px;
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 10px;
+    }
+    header{
+        height: 22px;
+        h1{
+          font-size: 20px;
+          text-shadow: -1px -0.5px 0px $red, 1px 0.5px 0px $black;
+          &:hover{
+            text-shadow: -1.5px -0.5px 0px $red, 1.5px 0.5px 0px $black;
+            }
+        }
+    }
+    .techers-list-wrapper{
+        form{
+            font-size: 10px;
+            input{
+                width: 8px;
+                height: 8px;
+            }
+        }
+        margin-top: 15px;
+    }
+    .statistics-table, .pagination{
+        font-size: 10px;
+    }
+    .func{
+        margin-top: 10px;
+    }
+    hr{
+        margin-top: 5px;
+    }
+    .headers{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .main-wrapper{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 130px;
+            }
+        }
+    }
+    .add-popup-active{
+        top: calc(50vh - 120px);
+    }
+    .teacher-active{
+        top: calc(50vh - 130px);
+        left: calc(50vw - 185px);
+        width: 370px;
+        height: 260px;
+        .title{
+            p:not(.comment){
+                margin-top: 10px;
+                margin-right: 10px;
+                font-size: 7px;
+            }
+            h2{
+                font-size: 18px;
+            }
+        }
+        .pic-disc{
+            margin-top: 15px;
+            .pic{
+                width: 42%;
+                img{
+                    width: 100%;
+                }
+            }
+            .disc{
+                padding-left: 5%;
+                padding-top: 1%;
+                h2{
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    &:after{
+                        font-size: 15px;
+                        margin-left: 20px;
+                        margin-top: 0px;
+                    }
+                }
+                p, a{
+                    font-size: 8px;
+                    margin-bottom: 8px;
+                }
+                width: 60%;
+            }
+        }
+        .comment{
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 7px;
+        }
+        .map{
+            font-size: 7px;
+            margin-left: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .teacher-list{
+        grid-template-columns: 1fr;
+    }
+    .navigation{
+        width: 100px;
+        a{
+            font-size: 5px;
+        }
+    }
+    .search-inpt-field{
+        height: 12px;
+        width: 60px;
+        padding-left: 5px;
+        margin-right: 5px;
+        font-size: 5px;
+    }
+    .search-submit-btn{
+        font-size: 5px;
+        cursor: pointer;
+        width: 30px;
+        height: 12px;   
+    }
+    .add-teacher{
+        margin-top: 17px;
+        width: 50px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 7px;
+    }
+    header{
+        height: 16px;
+        h1{
+          font-size: 14px;
+          text-shadow: -1px -0.5px 0px $red, 1px 0.5px 0px $black;
+          &:hover{
+            text-shadow: -1.5px -0.5px 0px $red, 1.5px 0.5px 0px $black;
+            }
+        }
+    }
+    .techers-list-wrapper{
+        form{
+            font-size: 5px;
+            input{
+                width: 5px;
+                height: 5px;
+            }
+        }
+        margin-top: 10px;
+    }
+    .statistics-table, .pagination{
+        font-size: 8px;
+    }
+    .func{
+        margin-top: 5px;
+    }
+    hr{
+        margin-top: 0px;
+    }
+    .headers{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .main-wrapper{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 160px;
+            }
+        }
+    }
+    .add-popup-active{
+        top: calc(50vh - 90px);
+    }
+    .teacher-active{
+        top: calc(50vh - 80px);
+        left: calc(50vw - 115px);
+        width: 230px;
+        height: 160px;
+        .title{
+            p:not(.comment){
+                margin-top: 5px;
+                margin-right: 5px;
+                font-size: 5px;
+            }
+            h2{
+                font-size: 12px;
+            }
+        }
+        .pic-disc{
+            margin-top: 10px;
+            .pic{
+                width: 42%;
+                img{
+                    width: 100%;
+                }
+            }
+            .disc{
+                padding-left: 5%;
+                padding-top: 1%;
+                h2{
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                    &:after{
+                        font-size: 10px;
+                        margin-left: 10px;
+                        margin-top: 0px;
+                    }
+                }
+                p, a{
+                    font-size: 5px;
+                    margin-bottom: 5px;
+                }
+                width: 60%;
+            }
+        }
+        .comment{
+            margin-top: 4px;
+            margin-bottom: -5px;
+            font-size: 4px;
+        }
+        .map{
+            font-size: 4px;
+            margin-left: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .techers-list-wrapper{
+        form{
+            font-size: 4px;
+            input{
+                width: 4px;
+                height: 4px;
+            }
+        }
+        margin-top: 7px;
+    }
+    .headers{
+        margin-top: 7px;
+    }
+    .teacher-list{
+        .favorite{
+            &:before{
+                margin-left: 150px;
+            }
+        }
+    }
+    .add-popup-active{
+        top: calc(50vh - 120px);
+    }
+    .add-popup-active{
+        top: calc(50vh - 70px);
+        left: calc(50vw - 145px);
+        width: 290px;
+    }
+}

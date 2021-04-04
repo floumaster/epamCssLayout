@@ -1,0 +1,472 @@
+$red: rgb(255, 48, 48);
+$grey: rgb(103, 103, 103);
+$dark-red: rgb(171, 25, 25);
+%card{
+    div{
+        text-align: center;
+        h2{
+            font-size: 30px;
+            width: 150px;
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+}
+body{
+    z-index: 1;
+}
+%popup{
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    top: 200px;
+    left: 35%;
+    margin: auto;
+    width: 30%;
+    height: 850px;
+    border: 1px solid #000;
+    p{
+        width: 95%;
+        text-align: right;
+        margin-top: 30px;
+        cursor: pointer;
+        font-size: 30px;
+        padding-right: 30px;
+    }
+    h2{
+        margin-top: -20px;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+}
+%div-img{
+    cursor: pointer;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid $red;
+    background-size: 140px;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    color: $red;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 120px;
+    &:hover{
+        border: 3px solid $dark-red;
+        background-size: 160px;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        color: $dark-red;
+        font-size: 32px;
+    }
+}
+
+*{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.head{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        color: rgb(241, 241, 241);
+        font-size: 50px;
+        font-family: 'Frank Ruhl Libre', serif;
+        text-shadow: -2px -2px 0px $red, 2px 2px 0px #000;
+        &:hover{
+            text-shadow: -3px -2px 0px $red, 3px 2px 0px #000;
+        }
+    }
+    form {
+        height: 100%;
+    }
+    input{
+        height: 100%;
+        background: transparent;
+        box-sizing: border-box;
+        font-size: 15px;
+        outline: none;
+    }
+}
+
+.search-inpt-field{
+    padding-left: 10px;
+    margin-right: 10px;
+    border: 1px solid $grey;
+}
+
+.search-submit-btn{
+    cursor: pointer;
+    width: 100px;
+    border: 1px solid $red;
+    color: $red;
+    font-weight: bold;
+    &:hover{
+        background-color: $red;
+        color: #fff;
+    }
+}
+
+.top{
+    color: $red;
+    a:hover{
+        color: $dark-red;
+    }
+}
+
+.func{
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    a{
+        cursor: pointer;
+        width: 160px;
+        display: block;
+        font-size: 22px;
+    }
+}
+
+.add-teacher{
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: $red;
+    font-weight: bold;
+    font-size: 22px;
+    border: 1px solid $red;
+    &:hover{
+        background-color: $red;
+        color: #fff;
+    }
+}
+
+hr{
+    width: 40%;
+    height: 1px;
+    background-color: #000;
+    border: none;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.techers-list{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    label{
+        color: $grey;
+        &:hover{
+            color: #000;
+        }
+    }
+    input{
+        margin-left: 15px;
+    }
+}
+
+.left-label-check{
+    border-right: 2px dotted $grey;
+        padding-right: 40px;
+}
+
+.techers-list{
+    margin-bottom: 40px;
+}
+
+.wrapper{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    @extend %card;
+}
+
+.statistics-table{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    tr{
+        width: 100%;
+        text-align: center;
+    }
+    td{
+        height: 30px;
+    }
+    h4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 4px solid transparent;
+        height: 100%;
+        line-height: 100%;
+        &:hover{
+            border-bottom: 4px solid #000;
+        }
+    }
+}
+
+.columns {
+    border-bottom: 1px solid #000;
+    td{
+        &:hover{
+            background-color: rgb(235, 235, 235);   
+        }
+    }
+    .name-coll{
+        padding-left: 0px;
+        h4{
+            justify-content: left;
+            padding-left: 20px;
+        }
+    }
+    
+}
+
+.name-coll{
+    text-align: left;
+    width: 40%;
+    padding-left: 20px;
+}
+
+.even{
+    background-color: rgba(251, 243, 243, 0.85);
+}
+
+.odd{
+    background-color: #fff;
+}
+.pagination{
+    margin-top: 40px;
+    margin-left: 10%;
+    a{
+        color: rgb(39, 93, 255);
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .current-page{
+        color: #000;
+    }
+}
+
+.favorites-wrapper{
+    display: flex;
+    margin-bottom: 40px;
+    img{
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+}
+
+.favorites{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    @extend %card;
+}
+
+.text{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+footer{
+    color: rgb(125, 102, 255);
+    a:hover{
+        color: rgb(0, 22, 101);
+    }
+}
+
+
+.div-img1{
+    background-image: url(../images/teachers/axile.png);
+    @extend %div-img;
+}
+.div-img2{
+    //background-image: url(../images/teachers/nafany.png);
+    @extend %div-img;
+}
+.div-img3{
+    background-image: url(../images/teachers/hobbit.png);
+    @extend %div-img;
+}
+.div-img4{
+    background-image: url(../images/teachers/interz.png);
+    @extend %div-img;
+}
+.div-img5{
+    background-image: url(../images/teachers/shiro.png);
+    @extend %div-img;
+}
+.div-img6{
+    background-image: url(../images/teachers/sanji.png);
+    @extend %div-img;
+}
+.div-img7{
+    //background-image: url(../images/teachers/buster.png);
+    @extend %div-img;
+}
+.div-img8{
+    //background-image: url(../images/teachers/petrik.png);
+    @extend %div-img;
+}
+
+
+.add-popup{
+    display: none;
+    @extend %popup;
+}
+
+.add-popup-active{
+    z-index: 2;
+    display: block;
+    @extend %popup;
+}
+
+.addForm{
+    z-index: 2;
+    filter: blur(0px);
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    height: 70%;
+    font-size: 14px;
+    select, input{
+        box-sizing: border-box;
+        font-size: 14px;
+        display: block;
+        height: 30px;
+        margin: auto;
+        margin-top: 10px;
+        width: 100%;
+    }
+    select{
+        width: 100%;
+        height: 30px;
+    }
+    .radio{
+        width: 10px;
+        padding-left: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .div-radio{
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        align-content: center;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .buttons{
+        display: flex;
+    }
+    .div-color{
+        display: flex;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        input{
+            width: 50px;
+            height: 22px;
+            margin-top: 0px;
+            margin-right: 0px;
+        }
+    }
+    .add{
+        background-color: #fff;
+        height: 50px;
+        font-size: 30px;
+        &:hover{
+            background-color: $red;
+        }
+    }
+}
+
+.main-wrapper{
+    filter: blur(0px);
+    &-active{
+        filter: blur(2px);
+    }
+}
+
+
+.teacher{
+    display: none;
+}
+
+.teacher-active{
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 750px;
+    top: 200px;
+    h2{
+        font-size: 40px;
+    }
+    left: 10%;
+    @extend %popup;
+    background-color: #fff;
+    border: 1px solid #000;
+    .comment{
+        width: 80%;
+        display: block;
+        margin: auto;
+        text-align: left;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+.pic-disc{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+}
+
+.disc{
+    margin-top: 30px;
+    margin-left: 60px;
+    a, h2, p{
+        text-align: left;
+    }
+}
+
+.map{
+    width: auto;
+    margin-left: 120px;
+    font-size: 14px;
+    color: rgb(0, 55, 255);
+    border-bottom: 1px dashed rgb(0, 55, 255);
+}
+
